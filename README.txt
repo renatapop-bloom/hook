@@ -19,7 +19,3 @@ Configure the existing ICA Catalog API Basic credentials in a Bloomreach authent
 Add the preset to a draft scenario scoped to one dedicated control profile. Done saves the form values; running the webhook publishes them. Test is a REAL catalog write. The API may acknowledge a queued update before the content becomes visible.
 Verify the actual saved preset authentication and catalog readback before using it in the demo. Hosting and native registration have not been performed by this package builder.
 Do not enable a customer email-send scenario as part of hosting this form.
-
-RICH CONTENT UPDATE
-One email subject only. Optional secondary button and inspiration section, button-shape presets, preview text, navigation and footer fields. Consent payload fix is included. Upload all files from this ZIP into the existing repository root, replacing matching files; keep the existing Pages and Bloomreach authentication settings.
-The template.html file is the updated fixed catalog-driven email HTML; use this updated layout for the sending template to display the new optional sections. Editing/publishing fields alone does not update a previously saved Bloomreach email design.
