@@ -25,7 +25,19 @@
     "store_id": "",
     "subject_a": "Your next shop, made more rewarding",
     "subject_b": "Three offers picked for you",
-    "subject_override": ""
+    "subject_override": "",
+    "preheader": "Fresh inspiration and a little more value from your ICA store.",
+    "eyebrow": "A LITTLE HELP WITH EVERYDAY FOOD",
+    "button_radius": "24px",
+    "secondary_cta_enabled": true,
+    "secondary_cta_text": "Find dinner inspiration",
+    "secondary_cta_url": "https://www.ica.se/recept/",
+    "feature_enabled": true,
+    "feature_heading": "A little inspiration for tonight",
+    "feature_body": "Discover easy recipes and find a new favourite for your next shop.",
+    "feature_image": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_1200,h_1200,c_lfill/imagevaultfiles/id_248525/cf_259/asiatisk_biffsallad.jpg",
+    "feature_cta_text": "Explore recipes",
+    "feature_cta_url": "https://www.ica.se/recept/"
   },
   "recipes": [
     {
