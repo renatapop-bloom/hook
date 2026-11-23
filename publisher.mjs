@@ -1,6 +1,6 @@
 export const fields=['headline','body_copy','banner_image','banner_alt','cta_text','cta_url','offers_heading','subject_a','subject_b'];
 export const centralFields=['headline','body_copy','banner_image','subject_override','local_offer_enabled','local_offer_heading','cta_text','subject_a','subject_b','banner_alt','cta_url','offers_heading'];
-const allowedOrigins=['https://app.exponea.com','https://demoapp.exponea.com'];
+export const allowedOrigins=['https://app.exponea.com','https://demoapp.exponea.com','https://demoapp.bloomreach.com'];
 const catalogUrl='https://api-demoapp.exponea.com/data/v2/projects/bf48fee4-d20d-11f1-a3bd-9e8d41698ac1/catalogs/6b041ab9210fd98ae46540af/items/en';
 export function validate(properties){
  for(const key of fields){if(typeof properties[key]!=='string'||!properties[key].trim())throw Error('Complete '+key.replaceAll('_',' '));if(properties[key].length>(key==='body_copy'?3000:2000))throw Error('Shorten '+key.replaceAll('_',' '));if(/{{|{%/.test(properties[key]))throw Error('Use plain text in content fields; keep personalisation in the fixed template.');}
@@ -35,7 +35,7 @@ async function start(){
 
  if(embedded){document.body.classList.add('embedded');$('#mode').textContent='Bloomreach widget';$('#publish').hidden=true;$('#save-draft').textContent='Check content';$('#download-webhook').hidden=true;$('#save-help').textContent='Use Done in Bloomreach to save these fields in the webhook node. Run the publishing scenario to update the central catalog. No customer emails are sent by this action.';
  window.addEventListener('message',event=>{if(event.source!==window.parent||!allowedOrigins.includes(event.origin))return;const message=event.data;if(!message||typeof message!=='object')return;
- if(message.message_type==='app_hello'){if(message.version!==1)return;appOrigin=event.origin;previousWebhook=message.webhook||{};try{if(previousWebhook.body)load(JSON.parse(previousWebhook.body).properties||{});initialized=true;window.parent.postMessage({message_type:'widget_initialized'},appOrigin);status('Connected. Edit content and use Done to save.');}catch(error){status('Could not restore this webhook: '+error.message,true);}}
+ if(message.message_type==='app_hello'){if(message.version!==1){status('Unsupported Bloomreach widget version: '+String(message.version),true);return;}appOrigin=event.origin;previousWebhook=message.webhook||{};try{if(previousWebhook.body)load(JSON.parse(previousWebhook.body).properties||{});initialized=true;window.parent.postMessage({message_type:'widget_initialized'},appOrigin);status('Connected. Edit content and use Done to save.');}catch(error){status('Could not restore this webhook: '+error.message,true);}}
  else if(message.message_type==='app_request_state'&&initialized&&event.origin===appOrigin){try{window.parent.postMessage({message_type:'widget_state',webhook:buildWebhook(model(),previousWebhook),widget_state:{editor_version:1}},appOrigin);status('Configuration returned to Bloomreach. The catalog updates when this webhook executes.');}catch(error){status(error.message,true);}}
  else if(message.message_type==='app_reject'){initialized=false;status('Bloomreach did not accept this widget protocol version.',true);}
  else if(message.message_type==='errors')status('Bloomreach could not save this configuration: '+JSON.stringify(message.errors),true);
