@@ -1,0 +1,88 @@
+{
+  "properties": {
+    "banner_alt": "Fresh inspiration for your next shop",
+    "banner_image": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_1200,h_1200,c_lfill/imagevaultfiles/id_248525/cf_259/asiatisk_biffsallad.jpg",
+    "body_copy": "Make your next shop a little more rewarding. We have picked three offers for you and loaded them to your ICA account. Come in and find something delicious.",
+    "content_version": "3",
+    "cta_text": "See your offers",
+    "cta_url": "https://www.ica.se/erbjudanden/",
+    "currency": "SEK",
+    "footer_copy": "Your ICA store. Offers are subject to their individual terms and availability. Prices shown in this demo are illustrative.",
+    "headline": "A little more inspiration. A little more value.",
+    "language": "en",
+    "local_offer_enabled": false,
+    "local_offer_heading": "A little extra from your local store",
+    "local_offer_product_id": "1422684",
+    "nav_link_1": "Recipes",
+    "nav_link_2": "Your offers",
+    "nav_link_3": "Your store",
+    "nav_url_1": "https://www.ica.se/recept/",
+    "nav_url_2": "https://www.ica.se/erbjudanden/",
+    "nav_url_3": "https://www.ica.se/butiker/",
+    "offers_heading": "Three offers, picked for you",
+    "program_id": "spend_growth",
+    "sender_name": "Your ICA store",
+    "store_id": "",
+    "subject_a": "Your next shop, made more rewarding",
+    "subject_b": "Three offers picked for you",
+    "subject_override": ""
+  },
+  "recipes": [
+    {
+      "item_id": "654200",
+      "recipe_id": "654200",
+      "title": "Asian beef salad",
+      "title_sv": "Asiatisk biffsallad",
+      "cuisine": "Asian",
+      "cooking_time_label": "Under 30 minutes",
+      "url": "https://www.ica.se/recept/asiatisk-biffsallad-654200/",
+      "candidate_product_ids": [
+        "1281437",
+        "1284122",
+        "1305312",
+        "1428940",
+        "2147085",
+        "1275514"
+      ],
+      "product_mapping_status": "demo_candidate_mapping_not_ICA_master_mapping",
+      "source_checked_date": "2026-11-20",
+      "fetch_status": "fetched_with_system_trust_bundle",
+      "image_url": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_1200,h_1200,c_lfill/imagevaultfiles/id_248525/cf_259/asiatisk_biffsallad.jpg"
+    },
+    {
+      "item_id": "288210",
+      "recipe_id": "288210",
+      "title": "Beef salad (Yam nuea)",
+      "title_sv": "Biffsallad (Yam nuea)",
+      "cuisine": "Thai",
+      "cooking_time_label": "Over 60 minutes",
+      "url": "https://www.ica.se/recept/biffsallad-yam-nuea-288210/",
+      "candidate_product_ids": [
+        "1285150",
+        "2122609",
+        "1281437",
+        "1428940",
+        "1305312",
+        "2147085"
+      ],
+      "product_mapping_status": "demo_candidate_mapping_not_ICA_master_mapping",
+      "source_checked_date": "2026-11-20",
+      "fetch_status": "fetched_with_system_trust_bundle",
+      "image_url": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_1200,h_1200,c_lfill/imagevaultfiles/id_47189/cf_259/biffsallad_(yam_nuea).jpg"
+    },
+    {
+      "item_id": "727370",
+      "recipe_id": "727370",
+      "title": "Bibimbap",
+      "title_sv": "Bibimbap",
+      "cuisine": "Korean",
+      "cooking_time_label": "Under 45 minutes",
+      "url": "https://www.ica.se/recept/bibimbap-727370/",
+      "candidate_product_ids": [],
+      "product_mapping_status": "demo_candidate_mapping_not_ICA_master_mapping",
+      "source_checked_date": "2026-11-20",
+      "fetch_status": "fetched_with_system_trust_bundle",
+      "image_url": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_1200,h_1200,c_lfill/imagevaultfiles/id_220945/cf_259/bibimbap.jpg"
+    }
+  ]
+}
