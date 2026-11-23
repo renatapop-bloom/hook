@@ -9,7 +9,7 @@ The form works from a project subpath; no domain-root resource paths are require
 
 This package contains static demo content, layout, styles and widget protocol code only. It contains no customer profiles, API key, API secret or Python server.
 Opening the Pages URL directly provides a preview and browser draft saving. It cannot write to Bloomreach directly. The preset executes the Catalog API write from Bloomreach using its configured authentication integration.
-The embedded form accepts parent messages only from https://app.exponea.com or https://demoapp.exponea.com. Add your exact official Bloomreach origin to allowedOrigins if it differs.
+The embedded form accepts parent messages only from https://app.exponea.com, https://demoapp.exponea.com or https://demoapp.bloomreach.com. Add your exact official Bloomreach origin to allowedOrigins if it differs.
 
 IN BLOOMREACH
 Data & Assets → Integrations → Webhook preset → Widget Webhook.
@@ -19,3 +19,7 @@ Configure the existing ICA Catalog API Basic credentials in a Bloomreach authent
 Add the preset to a draft scenario scoped to one dedicated control profile. Done saves the form values; running the webhook publishes them. Test is a REAL catalog write. The API may acknowledge a queued update before the content becomes visible.
 Verify the actual saved preset authentication and catalog readback before using it in the demo. Hosting and native registration have not been performed by this package builder.
 Do not enable a customer email-send scenario as part of hosting this form.
+
+RICH CONTENT UPDATE
+One email subject only. Optional secondary button and inspiration section, button-shape presets, preview text, navigation and footer fields. Consent payload fix is included. Upload all files from this ZIP into the existing repository root, replacing matching files; keep the existing Pages and Bloomreach authentication settings.
+The template.html file is the updated fixed catalog-driven email HTML; use this updated layout for the sending template to display the new optional sections. Editing/publishing fields alone does not update a previously saved Bloomreach email design.
